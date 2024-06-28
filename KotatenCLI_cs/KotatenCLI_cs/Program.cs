@@ -12,7 +12,6 @@ class Program
 
     static async Task Main()
     {
-        // Definindo o User-Agent para o HttpClient
         httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("KotatenCLI/1.0");
 
         Console.Write("Bem vindo(a)! Digite o título do mangá que você está procurando: ");
@@ -56,8 +55,6 @@ class Program
                             {
                                 await SalvarCapitulo(capitulo, diretorio);
                             }
-
-                            //Console.Write("Download concluído! Obrigado por usar Kotaten :D");
                         }
                         break;
                     }
@@ -78,8 +75,6 @@ class Program
             string responseBody = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"Detalhes do erro: {responseBody}");
         }
-
-        // Para manter a janela do console aberta após o término
         Console.Write("Obrigado por usar Kotaten! :D\nPressione qualquer tecla para sair... ");
         Console.ReadKey();
     }
@@ -149,8 +144,6 @@ class Program
         }
     }
 }
-
-// Classes para desserialização JSON
 
 public class MangaResponse
 {
