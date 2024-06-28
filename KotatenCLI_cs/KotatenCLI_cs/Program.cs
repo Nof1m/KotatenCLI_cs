@@ -12,7 +12,7 @@ class Program
 
     static async Task Main()
     {
-        httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("KotatenCLI/1.0");
+        httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("KotatenCLI/v1.0");
 
         Console.Write("Bem vindo(a)! Digite o título do mangá que você está procurando: ");
         string pesquisa = Console.ReadLine();
